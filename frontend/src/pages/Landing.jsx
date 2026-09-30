@@ -1,5 +1,6 @@
 import Dither from "../components/Dither";
 import Navbar from "../components/Navbar.jsx";
+import Footer from "../components/Footer.jsx";
 import "./Landing.css";
 export default function Landing() {
   return (
@@ -32,6 +33,7 @@ export default function Landing() {
           </p>
           <button className="hero-cta">Start Your Glow-Up</button>
         </section>
+        <Footer />
       </div>
     </div>
   );
