@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 export default function Navbar() {
   return (
@@ -19,7 +20,9 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="navbar-right">
-        <button>Signup</button>
+        <Link to="/signup" className="signup-btn">
+          SignUp
+        </Link>
       </div>
     </nav>
   );

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Dither from "../components/Dither";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
@@ -30,19 +31,26 @@ export default function Landing() {
       <div className="landing-contents">
         <Navbar />
         <section className="hero">
-          <span className="hero-eyebrow">YOUR GLOW-UP, YOUR WAY</span>
-          <h1 className="hero-title">
-            Level up together &amp; find your glowmate
-          </h1>
-          <p className="hero-dsec">
-            Build Habits, track your progress, stay accountable, and connect
-            with people who are growing alongside you.
-          </p>
-          <button className="hero-cta">Start Your Glow-Up</button>
-          <div style={{ width: 208, height: 208 }}>
+          <div className="hero-texts">
+            <span className="hero-eyebrow">YOUR GLOW-UP, YOUR WAY</span>
+            <br></br>
+            <h1 className="hero-title">
+              Level up together &amp; find your Glow
+            </h1>
+            <br></br>
+            <p className="hero-desc">
+              Build Habits, track your progress, stay accountable, and connect
+              with people who are growing alongside you.
+            </p>
+            <br></br>
+            <Link to="/signup" className="hero-cta">
+              Start Your Glow-Up
+            </Link>
+          </div>
+          <div className="stack" style={{ width: 280, height: 400 }}>
             <Stack
               sensitivity={110}
-              sendToBackOnClick={true}
+              sendToBackOnClick={false}
               cards={images.map((src, i) => (
                 <img
                   key={i}
@@ -52,7 +60,7 @@ export default function Landing() {
                 />
               ))}
               autoplay
-              autoplayDelay={3000}
+              autoplayDelay={2000}
               pauseOnHover
             />
           </div>
