@@ -18,8 +18,8 @@ export default function Landing() {
           waveColor={[
             0.9686274509803922, 0.4392156862745098, 0.7058823529411765,
           ]}
-          disableAnimation={false}
-          enableMouseInteraction
+          disableAnimation={true}
+          enableMouseInteraction={true}
           mouseRadius={0.2}
           colorNum={20.3}
           waveAmplitude={0.07}
