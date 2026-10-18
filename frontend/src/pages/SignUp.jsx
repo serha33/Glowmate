@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import "./SignUp.css";
 import Dither from "../components/Dither";
 export default function SignUp() {
   return (
     <div className="signup-page">
-      <div className="landing-bg">
+      <div className="bg-animation">
         <Dither
           waveColor={[
             0.9686274509803922, 0.4392156862745098, 0.7058823529411765,
@@ -24,7 +25,9 @@ export default function SignUp() {
           <input type="text" placeholder="Username" />
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />
-          <button type="submit">Sign Up</button>
+          <Link to="/dashboard" className="signup-button">
+            SignUp
+          </Link>
         </form>
       </div>
     </div>

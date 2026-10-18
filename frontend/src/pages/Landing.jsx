@@ -13,7 +13,7 @@ const images = [
 export default function Landing() {
   return (
     <div className="landing">
-      <div className="landing-bg">
+      <div className="bg-animation">
         <Dither
           waveColor={[
             0.9686274509803922, 0.4392156862745098, 0.7058823529411765,

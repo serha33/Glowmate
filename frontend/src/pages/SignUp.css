@@ -6,7 +6,7 @@
 }
 .signup-container {
     position: relative; 
-    display: flex;
+    display: flow-root;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -24,6 +24,7 @@
 .signup-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
     margin:auto;
     width: 100%;
@@ -43,20 +44,25 @@
     border-color: #ff5c8a;
     box-shadow: 0 0 0 4px rgba(255, 92, 138, 0.2);
 }
-.signup-form button {
+.signup-button {
     margin-top: 16px;
-  padding: 10px 30px;
+  padding:  14px 30px;
   font-size: 1rem;
   font-weight: 700;
   color: #fff;
   background: #ff4fa3;
   border: none;
-  border-radius: 20px;
+  border-radius: 999px;
   cursor: pointer;
   box-shadow: 0 8px 24px rgba(255, 79, 163, 0.4);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-decoration: none;
-  width: 49%;
+  text-align: center;
+}
+
+.signup-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 79, 163, 0.5);
 }
 
 .signup-heading {
@@ -67,6 +73,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     display: flex;
-    justify-content: flex-start;
+    ALIGN-ITEMS: center;
+    JUSTIFY-CONTENT: center;
     font-family: Poppins, sans-serif;
 }
