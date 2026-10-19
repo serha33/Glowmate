@@ -45,29 +45,75 @@ export default function Dashboard() {
                 <h2>Your Habits</h2>
                 <span className="habits-completed"> 0/3 Completed</span>
               </div>
-              <hr></hr>
+              <br></br>
               <ul className="habits-list">
                 <li className="habit-item">
-                  <input type="checkbox" />
+                  <input type="checkbox" className="custom-checkbox" />
                   <span>Meditation</span>
                 </li>
                 <li className="habit-item">
-                  <input type="checkbox" />
+                  <input type="checkbox" className="custom-checkbox" />
                   <span>Exercise</span>
                 </li>
                 <li className="habit-item">
-                  <input type="checkbox" />
+                  <input type="checkbox" className="custom-checkbox" />
                   <span>Healthy Eating</span>
+                </li>
+                <li className="habit-item">
+                  <input type="checkbox" className="custom-checkbox" />
+                  <span>gym</span>
+                </li>
+                <li className="habit-item">
+                  <input type="checkbox" className="custom-checkbox" />
+                  <span>coding</span>
                 </li>
               </ul>
               <span className="all-habits">See all habits →</span>
             </div>
             <div className="dashboard-card streaks">
-              <h2>Your Streaks</h2>
-              <p>
-                Maintain your daily streaks to build consistency and achieve
-                your goals.
-              </p>
+              <div className="streak-header">
+                <h2>Your Streaks🔥</h2>
+                <br></br>
+                <span className="streaks-qoute">
+                  Consistency looks good on you!
+                </span>
+              </div>
+              <div className="streak-main">
+                <span className="fire-emoji">🔥</span>
+                <h2> 7 days </h2>
+                <p>Current Streak</p>
+                <ul className="streak-days">
+                  <li className="streak-item">
+                    <div className="days-circle completed">✓</div>
+                    <span className="day-name">M</span>
+                  </li>
+                  <li className="streak-item">
+                    <div className="days-circle completed">✓</div>
+                    <span className="day-name">T</span>
+                  </li>
+                  <li className="streak-item">
+                    <div className="days-circle completed">✓</div>
+                    <span className="day-name">W</span>
+                  </li>
+                  <li className="streak-item">
+                    <div className="days-circle completed">✓</div>
+                    <span className="day-name">T</span>
+                  </li>
+                  <li className="streak-item">
+                    <div className="days-circle completed">✓</div>
+                    <span className="day-name">F</span>
+                  </li>
+                  <li className="streak-item">
+                    <div className="days-circle completed">✓</div>
+                    <span className="day-name">S</span>
+                  </li>
+                  <li className="streak-item">
+                    <div className="days-circle completed">✓</div>
+                    <span className="day-name">S</span>
+                  </li>
+                </ul>
+                <p>A little Progress Everyday🌸</p>
+              </div>
             </div>
           </div>
           <div className="row2-dashboard">
