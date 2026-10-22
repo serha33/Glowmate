@@ -23,6 +23,7 @@ export default function Dashboard() {
       <Navbar />
       <div className="dashboard-layout">
         <div className="dashboard-content">
+          {/* Welcome card */}
           <div className="dashboard-card welcome">
             <span className="welcome-eyebrow">Your Glow Status</span>
             <br></br>
@@ -39,6 +40,7 @@ export default function Dashboard() {
               </p>
             </section>
           </div>
+          {/* Habits card */}
           <div className="row1-dashboard">
             <div className="dashboard-card habits">
               <div className="habits-top">
@@ -70,6 +72,7 @@ export default function Dashboard() {
               </ul>
               <span className="all-habits">See all habits →</span>
             </div>
+            {/* Streaks card */}
             <div className="dashboard-card streaks">
               <div className="streak-header">
                 <h2>Your Streaks🔥</h2>
@@ -112,15 +115,56 @@ export default function Dashboard() {
                     <span className="day-name">S</span>
                   </li>
                 </ul>
-                <p>A little Progress Everyday🌸</p>
+                <span className="qoute-bottom">
+                  A little Progress Everyday🌸
+                </span>
               </div>
             </div>
           </div>
+          {/* Community card */}
           <div className="row2-dashboard">
             <div className="dashboard-card communities">
-              <h2>Your Communities</h2>
-              <p>Connect with like-minded individuals and grow together.</p>
+              <div className="community-top">
+                <h2>Your Communities</h2>
+                <span className="community-qoute">
+                  Together we shine brighter
+                </span>
+              </div>
+              <ul className="community-list">
+                <li className="members">
+                  <div className="avatar">S</div>
+                  <div className="member-details">
+                    <div className="name">Serha</div>
+                    <div className="activity">Complete 75 days Challenge!</div>
+                  </div>
+                </li>
+                <li className="members">
+                  <div className="avatar">R</div>
+                  <div className="member-details">
+                    <div className="name">Risy</div>
+                    <p className="activity">Started a new Challenge !</p>
+                  </div>
+                </li>
+                <li className="members">
+                  <div className="avatar">S</div>
+                  <div className="member-details">
+                    <div className="name">Suzy</div>
+                    <div className="activity">Complete 75 days Challenge!</div>
+                  </div>
+                </li>
+                <li className="members">
+                  <div className="avatar">K</div>
+                  <div className="member-details">
+                    <div className="name">Kira</div>
+                    <p className="activity">
+                      Complete healthy eating Challenge!
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <span className="all-activities">See all Activities →</span>
             </div>
+            {/* Challenge card */}
             <div className="dashboard-card challenge">
               <h2>Your Challenges</h2>
               <p>
@@ -130,6 +174,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
+        {/* Profile card */}
         <div className="dashboard-card profile">
           <h2>Your Profile</h2>
           <p>Update your information and manage your account settings.</p>
