@@ -1,10 +1,32 @@
 import Dither from "../components/Dither";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
+import { FaFire } from "react-icons/fa6";
+import { FcTodoList } from "react-icons/fc";
+import { IoMdTrophy } from "react-icons/io";
+import { GiMeditation } from "react-icons/gi";
 import "./Dashboard.css";
 export default function Dashboard() {
   return (
     <div className="dashboard-page">
+      <svg width="0" height="0" style={{ position: "absolute" }}>
+        <defs>
+          <linearGradient id="fire-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stopColor="#ffcc00" /> {/* Yellow at bottom */}
+            <stop offset="100%" stopColor="#ff4500" /> {/* Orange at top */}
+          </linearGradient>
+          <linearGradient
+            id="trophy-gradient"
+            x1="0%"
+            y1="100%"
+            x2="0%"
+            y2="0%"
+          >
+            <stop offset="0%" stopColor="#ad8110" />
+            <stop offset="100%" stopColor="#fcdf05" />
+          </linearGradient>
+        </defs>
+      </svg>
       <div className="bg-animation">
         <Dither
           waveColor={[
@@ -23,31 +45,77 @@ export default function Dashboard() {
       <Navbar />
       <div className="dashboard-layout">
         <div className="dashboard-content">
-          {/* Welcome card */}
-          <div className="dashboard-card welcome">
-            <span className="welcome-eyebrow">Your Glow Status</span>
-            <br></br>
-            <section className="welcome-message">
-              <h1>Hey Serha, ready to glow today?</h1>
-            </section>
-            <br></br>
-            <section className="welcome-qoute">
-              <p>"Small steps every day lead to big changes over time." </p>
-              <p>
-                You're currently on a{" "}
-                <span className="streak-highlight">7-day</span> streak! Keep
-                going, you're doing great!
-              </p>
-            </section>
+          {/* streaks card */}
+          <div className="dashboard-card streaks">
+            <div className="streak-header">
+              <h2>
+                Streaks{" "}
+                <FaFire className="fire-emoji" fill="url(#fire-gradient)" />
+              </h2>
+              <span className="streaks-qoute">
+                Consistency looks good on you!
+              </span>
+              <div className="streak-number">
+                <span>7 Days</span>
+              </div>
+            </div>
+            <div className="streak-main">
+              <ul className="streak-days">
+                <li className="streak-item">
+                  <div className="days-circle completed">
+                    <FaFire className="fire-emoji" fill="url(#fire-gradient)" />
+                  </div>
+                  <span className="day-name">M</span>
+                </li>
+                <li className="streak-item">
+                  <div className="days-circle completed">
+                    <FaFire className="fire-emoji" fill="url(#fire-gradient)" />
+                  </div>
+                  <span className="day-name">T</span>
+                </li>
+                <li className="streak-item">
+                  <div className="days-circle completed">
+                    <FaFire className="fire-emoji" fill="url(#fire-gradient)" />
+                  </div>
+                  <span className="day-name">W</span>
+                </li>
+                <li className="streak-item">
+                  <div className="days-circle completed">
+                    <FaFire className="fire-emoji" fill="url(#fire-gradient)" />
+                  </div>
+                  <span className="day-name">T</span>
+                </li>
+                <li className="streak-item">
+                  <div className="days-circle completed">
+                    <FaFire className="fire-emoji" fill="url(#fire-gradient)" />
+                  </div>
+                  <span className="day-name">F</span>
+                </li>
+                <li className="streak-item">
+                  <div className="days-circle completed">
+                    <FaFire className="fire-emoji" fill="url(#fire-gradient)" />
+                  </div>
+                  <span className="day-name">S</span>
+                </li>
+                <li className="streak-item">
+                  <div className="days-circle completed">
+                    <FaFire className="fire-emoji" fill="url(#fire-gradient)" />
+                  </div>
+                  <span className="day-name">S</span>
+                </li>
+              </ul>
+            </div>
+            <button className="scroll-streak">{">"}</button>
           </div>
-          {/* Habits card */}
           <div className="row1-dashboard">
+            {/* Habits card */}
             <div className="dashboard-card habits">
               <div className="habits-top">
-                <h2>Your Habits</h2>
-                <span className="habits-completed"> 0/3 Completed</span>
+                <h2>
+                  Habits <FcTodoList />
+                </h2>
+                <span className="habits-completed"> 4/10 Completed</span>
               </div>
-              <br></br>
               <ul className="habits-list">
                 <li className="habit-item">
                   <input type="checkbox" className="custom-checkbox" />
@@ -55,11 +123,7 @@ export default function Dashboard() {
                 </li>
                 <li className="habit-item">
                   <input type="checkbox" className="custom-checkbox" />
-                  <span>Exercise</span>
-                </li>
-                <li className="habit-item">
-                  <input type="checkbox" className="custom-checkbox" />
-                  <span>Healthy Eating</span>
+                  <span>code</span>
                 </li>
                 <li className="habit-item">
                   <input type="checkbox" className="custom-checkbox" />
@@ -67,110 +131,101 @@ export default function Dashboard() {
                 </li>
                 <li className="habit-item">
                   <input type="checkbox" className="custom-checkbox" />
-                  <span>coding</span>
+                  <span>Project</span>
                 </li>
               </ul>
+              <div className="habitprogress-bar">
+                <div className="habitprogress-fill"></div>
+              </div>
               <span className="all-habits">See all habits →</span>
             </div>
-            {/* Streaks card */}
-            <div className="dashboard-card streaks">
-              <div className="streak-header">
-                <h2>Your Streaks🔥</h2>
-                <br></br>
-                <span className="streaks-qoute">
-                  Consistency looks good on you!
-                </span>
+            {/* Challenge card */}
+            <div className="dashboard-card challenges">
+              <div className="challenges-top">
+                <h2>
+                  Challenges{" "}
+                  <IoMdTrophy
+                    className="Trophy-icon"
+                    fill="url(#trophy-gradient)"
+                  />
+                </h2>
+                <span className="challenge-qoute">Join and Earn XP</span>
               </div>
-              <div className="streak-main">
-                <span className="fire-emoji">🔥</span>
-                <h2> 7 days </h2>
-                <p>Current Streak</p>
-                <ul className="streak-days">
-                  <li className="streak-item">
-                    <div className="days-circle completed">✓</div>
-                    <span className="day-name">M</span>
-                  </li>
-                  <li className="streak-item">
-                    <div className="days-circle completed">✓</div>
-                    <span className="day-name">T</span>
-                  </li>
-                  <li className="streak-item">
-                    <div className="days-circle completed">✓</div>
-                    <span className="day-name">W</span>
-                  </li>
-                  <li className="streak-item">
-                    <div className="days-circle completed">✓</div>
-                    <span className="day-name">T</span>
-                  </li>
-                  <li className="streak-item">
-                    <div className="days-circle completed">✓</div>
-                    <span className="day-name">F</span>
-                  </li>
-                  <li className="streak-item">
-                    <div className="days-circle completed">✓</div>
-                    <span className="day-name">S</span>
-                  </li>
-                  <li className="streak-item">
-                    <div className="days-circle completed">✓</div>
-                    <span className="day-name">S</span>
-                  </li>
-                </ul>
-                <span className="qoute-bottom">
-                  A little Progress Everyday🌸
-                </span>
+              <div className="challenge-cards">
+                <div className="challenge-list">
+                  <div className="challenge-card1">
+                    <div className="card-details">
+                      <div className="icon">
+                        <GiMeditation />
+                      </div>
+                      <div className="texts">
+                        <h2>7-Day Meditation</h2>
+                        <div className="type">
+                          <span className="level">Easy</span>
+                          <span className="contestents">
+                            ●10 Users Participated
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="card-progress">
+                      <div className="progress-bar">
+                        <div className="progress-fill"></div>
+                      </div>
+                      <span>Day 3 of 7</span>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <span className="explore-challenges">Explore Challenges→</span>
             </div>
           </div>
-          {/* Community card */}
+
           <div className="row2-dashboard">
+            {/* Community card */}
             <div className="dashboard-card communities">
-              <div className="community-top">
-                <h2>Your Communities</h2>
-                <span className="community-qoute">
-                  Together we shine brighter
+              <div className="community-left">
+                <h2>Communities</h2>
+                <span className="community-qoute-top">
+                  Find your Mates, share your Journey and Glow together
+                </span>
+                <div className="avatar-group">
+                  <img
+                    src="https://images.unsplash.com/vector-1784837765568-153cc511eb8e?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt="User 1"
+                    className="avatar"
+                  />
+                  <img
+                    src="https://images.unsplash.com/vector-1784837765540-f6e876deb1c7?q=80&w=732&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt="User 2"
+                    className="avatar"
+                  />
+                  <img
+                    src="https://images.unsplash.com/vector-1784838057160-8cbeb71bc6b1?q=80&w=892&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt="User 3"
+                    className="avatar"
+                  />
+                  <img
+                    src="https://images.unsplash.com/vector-1785230088600-9e0c2a34a441?q=80&w=937&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt="User 4"
+                    className="avatar"
+                  />
+                  <div className="avatar badge">24+</div>
+                </div>
+                <span className="community-qoute-bottom">
+                  Together it's more fun!
                 </span>
               </div>
-              <ul className="community-list">
-                <li className="members">
-                  <div className="avatar">S</div>
-                  <div className="member-details">
-                    <div className="name">Serha</div>
-                    <div className="activity">Complete 75 days Challenge!</div>
-                  </div>
-                </li>
-                <li className="members">
-                  <div className="avatar">R</div>
-                  <div className="member-details">
-                    <div className="name">Risy</div>
-                    <p className="activity">Started a new Challenge !</p>
-                  </div>
-                </li>
-                <li className="members">
-                  <div className="avatar">S</div>
-                  <div className="member-details">
-                    <div className="name">Suzy</div>
-                    <div className="activity">Complete 75 days Challenge!</div>
-                  </div>
-                </li>
-                <li className="members">
-                  <div className="avatar">K</div>
-                  <div className="member-details">
-                    <div className="name">Kira</div>
-                    <p className="activity">
-                      Complete healthy eating Challenge!
-                    </p>
-                  </div>
-                </li>
-              </ul>
-              <span className="all-activities">See all Activities →</span>
-            </div>
-            {/* Challenge card */}
-            <div className="dashboard-card challenge">
-              <h2>Your Challenges</h2>
-              <p>
-                Participate in challenges to stay motivated and achieve your
-                goals.
-              </p>
+              <div className="community-right">
+                <button className="join-community">Join Community</button>
+                <div className="community-image-wrapper">
+                  <img
+                    src="https://images.unsplash.com/vector-1780626754016-30bbc642d247?q=80&w=1117&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt="Community Illustration"
+                    className="right-illustration"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
