@@ -5,6 +5,7 @@ import { FaFire } from "react-icons/fa6";
 import { FcTodoList } from "react-icons/fc";
 import { IoMdTrophy } from "react-icons/io";
 import { GiMeditation } from "react-icons/gi";
+import { HiMiniUserGroup } from "react-icons/hi2";
 import "./Dashboard.css";
 export default function Dashboard() {
   return (
@@ -24,6 +25,16 @@ export default function Dashboard() {
           >
             <stop offset="0%" stopColor="#ad8110" />
             <stop offset="100%" stopColor="#fcdf05" />
+          </linearGradient>
+          <linearGradient
+            id="community-gradient"
+            x1="0%"
+            y1="100%"
+            x2="0%"
+            y2="0%"
+          >
+            <stop offset="0%" stopColor="#ad107b" />
+            <stop offset="100%" stopColor="#ff8db5" />
           </linearGradient>
         </defs>
       </svg>
@@ -52,13 +63,12 @@ export default function Dashboard() {
                 Streaks{" "}
                 <FaFire className="fire-emoji" fill="url(#fire-gradient)" />
               </h2>
-              <span className="streaks-qoute">
-                Consistency looks good on you!
-              </span>
+              <span className="light-text">Consistency looks good on you!</span>
               <div className="streak-number">
                 <span>7 Days</span>
               </div>
             </div>
+            <button className="scroll-streak">{"<"}</button>
             <div className="streak-main">
               <ul className="streak-days">
                 <li className="streak-item">
@@ -103,6 +113,18 @@ export default function Dashboard() {
                   </div>
                   <span className="day-name">S</span>
                 </li>
+                <li className="streak-item">
+                  <div className="days-circle completed">
+                    <FaFire className="fire-emoji" fill="url(#fire-gradient)" />
+                  </div>
+                  <span className="day-name">S</span>
+                </li>
+                <li className="streak-item">
+                  <div className="days-circle completed">
+                    <FaFire className="fire-emoji" fill="url(#fire-gradient)" />
+                  </div>
+                  <span className="day-name">S</span>
+                </li>
               </ul>
             </div>
             <button className="scroll-streak">{">"}</button>
@@ -114,7 +136,7 @@ export default function Dashboard() {
                 <h2>
                   Habits <FcTodoList />
                 </h2>
-                <span className="habits-completed"> 4/10 Completed</span>
+                <span className="light-text"> 4/10 Completed</span>
               </div>
               <ul className="habits-list">
                 <li className="habit-item">
@@ -149,7 +171,7 @@ export default function Dashboard() {
                     fill="url(#trophy-gradient)"
                   />
                 </h2>
-                <span className="challenge-qoute">Join and Earn XP</span>
+                <span className="light-text">Join and Earn XP</span>
               </div>
               <div className="challenge-cards">
                 <div className="challenge-list">
@@ -162,7 +184,7 @@ export default function Dashboard() {
                         <h2>7-Day Meditation</h2>
                         <div className="type">
                           <span className="level">Easy</span>
-                          <span className="contestents">
+                          <span className="light-text">
                             ●10 Users Participated
                           </span>
                         </div>
@@ -172,7 +194,7 @@ export default function Dashboard() {
                       <div className="progress-bar">
                         <div className="progress-fill"></div>
                       </div>
-                      <span>Day 3 of 7</span>
+                      <span className="light-text">Day 3 of 7</span>
                     </div>
                   </div>
                 </div>
@@ -185,8 +207,11 @@ export default function Dashboard() {
             {/* Community card */}
             <div className="dashboard-card communities">
               <div className="community-left">
-                <h2>Communities</h2>
-                <span className="community-qoute-top">
+                <h2>
+                  Communities{" "}
+                  <HiMiniUserGroup fill="url(#community-gradient)" />
+                </h2>
+                <span className="light-text">
                   Find your Mates, share your Journey and Glow together
                 </span>
                 <div className="avatar-group">
@@ -212,9 +237,7 @@ export default function Dashboard() {
                   />
                   <div className="avatar badge">24+</div>
                 </div>
-                <span className="community-qoute-bottom">
-                  Together it's more fun!
-                </span>
+                <span className="light-text">Together it's more fun!</span>
               </div>
               <div className="community-right">
                 <button className="join-community">Join Community</button>
@@ -231,8 +254,80 @@ export default function Dashboard() {
         </div>
         {/* Profile card */}
         <div className="dashboard-card profile">
-          <h2>Your Profile</h2>
-          <p>Update your information and manage your account settings.</p>
+          <div className="profile-header">
+            <div className="profile-frame"></div>
+            <div className="profile-avatar">
+              <img
+                src="https://images.unsplash.com/vector-1766996683718-48b622d11a2d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                alt="avatar"
+              ></img>
+            </div>
+            <div className="profile-name">
+              <h2>Serha</h2>
+              <span className="username">@serhaxstar</span>
+            </div>
+            <p className="bio">In my glow-up era</p>
+          </div>
+          <div className="profile-xp">
+            <h2>
+              Level 2 - <span>Seed 🌱</span>
+            </h2>
+
+            <div className="profile-xp-info">
+              <span>50/1000 XP</span>
+              <span>5%</span>
+            </div>
+
+            <div className="profile-xp-track">
+              <div className="profile-xp-fill"></div>
+            </div>
+          </div>
+          <div className="profile-stats">
+            <div className="profile-streaks">
+              <span>
+                <FaFire className="fire-emoji" fill="url(#fire-gradient)" />
+              </span>
+              <h2>7 Days</h2>
+              <p>Streaks</p>
+            </div>
+            <div className="profile-level">
+              <span>🌱</span>
+              <h2>Seed</h2>
+              <p>Level 2</p>
+            </div>
+            <div className="profile-badges">
+              <span>
+                <IoMdTrophy
+                  className="Trophy-icon"
+                  fill="url(#trophy-gradient)"
+                />
+              </span>
+              <h2>2</h2>
+              <p>Badges</p>
+            </div>
+          </div>
+          <div className="profile-current">
+            <h2>Currently Glowing</h2>
+            <span>Coding</span>
+            <span>fitness</span>
+            <span>wellness</span>
+          </div>
+          <div className="profile-challenges">
+            <h2>Challenges</h2>
+            <div className="challenge-card-profile">
+              <div className="icon">
+                <GiMeditation />
+              </div>
+              <div className="texts">
+                <h2>7-Day Meditation</h2>
+                <span className="contestents"></span>
+                <div className="type">
+                  <span className="level">Easy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button className="edit-profile">Edit Profile</button>
         </div>
       </div>
       <Footer />
