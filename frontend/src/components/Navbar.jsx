@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 export default function Navbar() {
   return (
@@ -6,18 +7,31 @@ export default function Navbar() {
         <h4 className="logo">GlowMate</h4>
       </div>
       <div className="navbar-center">
-        <ul className="nav-links">
+        <ul className="links">
           <li>
-            <a href="#">Streaks</a>
+            <NavLink to="/dashboard" className="nav-link">
+              Home
+            </NavLink>
           </li>
           <li>
-            <a href="#">Habbits</a>
+            <NavLink to="/streaks" className="nav-link">
+              Streaks
+            </NavLink>
           </li>
           <li>
-            <a href="#">Challenges</a>
+            <NavLink to="/habits" className="nav-link">
+              Habbits
+            </NavLink>
           </li>
           <li>
-            <a href="#">Community</a>
+            <NavLink to="/challenges" className="nav-link">
+              Challenges
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/community" className="nav-link">
+              Community
+            </NavLink>
           </li>
         </ul>
       </div>

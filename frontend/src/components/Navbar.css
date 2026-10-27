@@ -27,15 +27,15 @@
   color: #18151c;
 }
 
-.nav-links {
+.links {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 32px;
-
   list-style: none;
 }
 
-.nav-links a {
+.links a {
   color: #716b78;
   text-decoration: none;
   font-size: 1.2rem;
@@ -44,8 +44,14 @@
   transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
+.links a:hover {
   color: #ff5c8a;
+}
+.nav-link.active {
+  color: #DE69A1;
+  background-color:#f0d8e5;
+  border-radius: 10px;
+  padding:  6px 14px;
 }
 
 .logo{

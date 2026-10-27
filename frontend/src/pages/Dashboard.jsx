@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Dither from "../components/Dither";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
@@ -67,6 +68,9 @@ export default function Dashboard() {
               <div className="streak-number">
                 <span>7 Days</span>
               </div>
+              <Link to="/streaks" className="dashboard-link">
+                See Streak History →
+              </Link>
             </div>
             <button className="scroll-streak">{"<"}</button>
             <div className="streak-main">
@@ -117,19 +121,19 @@ export default function Dashboard() {
                   <div className="days-circle completed">
                     <FaFire className="fire-emoji" fill="url(#fire-gradient)" />
                   </div>
-                  <span className="day-name">S</span>
+                  <span className="day-name">M</span>
                 </li>
                 <li className="streak-item">
                   <div className="days-circle completed">
                     <FaFire className="fire-emoji" fill="url(#fire-gradient)" />
                   </div>
-                  <span className="day-name">S</span>
+                  <span className="day-name">T</span>
                 </li>
               </ul>
             </div>
             <button className="scroll-streak">{">"}</button>
           </div>
-          <div className="row1-dashboard">
+          <div className="habits-challenges-row">
             {/* Habits card */}
             <div className="dashboard-card habits">
               <div className="habits-top">
@@ -159,7 +163,9 @@ export default function Dashboard() {
               <div className="habitprogress-bar">
                 <div className="habitprogress-fill"></div>
               </div>
-              <span className="all-habits">See all habits →</span>
+              <Link to="/habits" className="dashboard-link">
+                See all habits →
+              </Link>
             </div>
             {/* Challenge card */}
             <div className="dashboard-card challenges">
@@ -199,55 +205,55 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
-              <span className="explore-challenges">Explore Challenges→</span>
+              <Link to="/Challenges" className="dashboard-link">
+                Explore Challenges→
+              </Link>
             </div>
           </div>
-
-          <div className="row2-dashboard">
-            {/* Community card */}
-            <div className="dashboard-card communities">
-              <div className="community-left">
-                <h2>
-                  Communities{" "}
-                  <HiMiniUserGroup fill="url(#community-gradient)" />
-                </h2>
-                <span className="light-text">
-                  Find your Mates, share your Journey and Glow together
-                </span>
-                <div className="avatar-group">
-                  <img
-                    src="https://images.unsplash.com/vector-1784837765568-153cc511eb8e?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
-                    alt="User 1"
-                    className="avatar"
-                  />
-                  <img
-                    src="https://images.unsplash.com/vector-1784837765540-f6e876deb1c7?q=80&w=732&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
-                    alt="User 2"
-                    className="avatar"
-                  />
-                  <img
-                    src="https://images.unsplash.com/vector-1784838057160-8cbeb71bc6b1?q=80&w=892&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
-                    alt="User 3"
-                    className="avatar"
-                  />
-                  <img
-                    src="https://images.unsplash.com/vector-1785230088600-9e0c2a34a441?q=80&w=937&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
-                    alt="User 4"
-                    className="avatar"
-                  />
-                  <div className="avatar badge">24+</div>
-                </div>
-                <span className="light-text">Together it's more fun!</span>
+          {/* Community card */}
+          <div className="dashboard-card communities">
+            <div className="community-left">
+              <h2>
+                Communities <HiMiniUserGroup fill="url(#community-gradient)" />
+              </h2>
+              <span className="light-text">
+                Find your Mates, share your Journey and Glow together
+              </span>
+              <div className="avatar-group">
+                <img
+                  src="https://images.unsplash.com/vector-1784837765568-153cc511eb8e?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                  alt="User 1"
+                  className="avatar"
+                />
+                <img
+                  src="https://images.unsplash.com/vector-1784837765540-f6e876deb1c7?q=80&w=732&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                  alt="User 2"
+                  className="avatar"
+                />
+                <img
+                  src="https://images.unsplash.com/vector-1784838057160-8cbeb71bc6b1?q=80&w=892&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                  alt="User 3"
+                  className="avatar"
+                />
+                <img
+                  src="https://images.unsplash.com/vector-1785230088600-9e0c2a34a441?q=80&w=937&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                  alt="User 4"
+                  className="avatar"
+                />
+                <div className="avatar badge">24+</div>
               </div>
-              <div className="community-right">
-                <button className="join-community">Join Community</button>
-                <div className="community-image-wrapper">
-                  <img
-                    src="https://images.unsplash.com/vector-1780626754016-30bbc642d247?q=80&w=1117&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
-                    alt="Community Illustration"
-                    className="right-illustration"
-                  />
-                </div>
+              <span className="light-text">Together it's more fun!</span>
+            </div>
+            <div className="community-right">
+              <Link to="/community" className="join-community">
+                Join Community
+              </Link>
+              <div className="community-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/vector-1780626754016-30bbc642d247?q=80&w=1117&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                  alt="Community Illustration"
+                  className="right-illustration"
+                />
               </div>
             </div>
           </div>
