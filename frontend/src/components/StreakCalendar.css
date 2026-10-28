@@ -1,0 +1,143 @@
+.streak-calendar {
+  width: 100%;
+  padding: 24px;
+  background: linear-gradient(135deg, #ffe0f5 0%, #ffffff 60%, #ffebee 100%);
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid#E8D2DE;
+box-shadow: 0px 6px 20px 2px rgba(48, 44, 50, 0.15);
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;  
+}
+
+.calendar-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.calendar-nav {
+ align-self: center;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #DE69A1;
+
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(48, 44, 50, 0.1);
+
+  transition: background 0.25s ease,
+              box-shadow 0.25s ease,
+              transform 0.25s ease;
+}
+
+.calendar-nav:hover {
+background: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 14px rgba(48, 44, 50, 0.15);
+  transform: scale(1.05);
+}
+
+.calendar-legend {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: #555555;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  background: #ffc88d;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 12px 6px;
+  text-align: center;
+}
+
+.weekday {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #444444;
+  padding-bottom: 8px;
+}
+
+.calendar-date-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.calendar-date {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.95rem;
+  color: #444444;
+  transition: background 0.2s ease;
+}
+
+.calendar-date.completed {
+  background: #ffc88d;
+  color: #4d3b24;
+}
+
+.calendar-date.today {
+  outline: 2px solid #e99ab2;
+  outline-offset: 2px;
+  font-weight: 700;
+}
+
+.calendar-date.future {
+  color: #aaaaaa;
+}
+
+@media (max-width: 600px) {
+  .streak-calendar {
+    padding: 16px;
+  }
+
+  .calendar-header {
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+
+  .calendar-header h2 {
+    font-size: 1rem;
+  }
+
+  .calendar-grid {
+    gap: 10px 2px;
+  }
+
+  .calendar-date {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+
+  .calendar-legend {
+    font-size: 0.75rem;
+  }
+}
+

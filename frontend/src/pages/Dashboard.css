@@ -369,7 +369,7 @@ top:2px;
   gap: 12px;
 }
 
-.icon{
+.card-details .icon{
   display:flex;
   align-items: center;
   justify-content: center;

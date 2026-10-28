@@ -1,6 +1,7 @@
 import Dither from "../components/Dither";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
+import StreakCalendar from "../components/StreakCalendar.jsx";
 import { FaFire } from "react-icons/fa6";
 import "./Streaks.css";
 export default function Streaks() {
@@ -43,7 +44,8 @@ export default function Streaks() {
             <div className="current-header">
               <h2>Current Streak</h2>
               <span className="number">
-                7 <FaFire className="fire-emoji" fill="url(#fire-gradient)" />
+                3 Days{" "}
+                <FaFire className="fire-emoji" fill="url(#fire-gradient)" />
               </span>
             </div>
             <div className="current-message">
@@ -56,10 +58,102 @@ export default function Streaks() {
               </p>
             </div>
           </div>
-          <div className="streaks-card statistics"></div>
-          <div className="streaks-card calender"></div>
+          <div className="statistics">
+            <div className="streaks-card row longest-streak">
+              <div className="icon">🏆</div>
+              <div className="details">
+                <span>Longest Streak</span>
+                <h2>3 Days</h2>
+              </div>
+            </div>
+            <div className="streaks-card row total-glowups">
+              <div className="icon">🌸</div>
+              <div className="details">
+                <span>Total Glow-ups</span>
+                <h2>6</h2>
+              </div>
+            </div>
+            <div className="streaks-card row active-days">
+              <div className="icon">📅</div>
+              <div className="details">
+                <span>Active Days</span>
+                <h2>8 Days</h2>
+              </div>
+            </div>
+          </div>
+          <StreakCalendar />
         </div>
-        <div className="streaks-card active-habits"></div>
+        <div className="streaks-card active-habits">
+          <h2>Active habits</h2>
+          <div className="habits-streaks 1">
+            <div className="details">
+              <div className="heading">
+                <h2>Gym</h2>
+                <span>
+                  2<FaFire className="fire-emoji" fill="url(#fire-gradient)" />
+                </span>
+              </div>
+            </div>
+            <div className="weekly-info">
+              <p>Weekly Progress</p>
+              <span>2/7</span>
+            </div>
+            <div className="progress-bar">
+              <div className="progress-fill"></div>
+            </div>
+          </div>
+          <div className="habits-streaks 2">
+            <div className="details">
+              <div className="heading">
+                <h2>Meditation</h2>
+                <span>
+                  2<FaFire className="fire-emoji" fill="url(#fire-gradient)" />
+                </span>
+              </div>
+            </div>
+            <div className="weekly-info">
+              <p>Weekly Progress</p>
+              <span>2/7</span>
+            </div>
+            <div className="progress-bar">
+              <div className="progress-fill"></div>
+            </div>
+          </div>
+          <div className="habits-streaks 3">
+            <div className="details">
+              <div className="heading">
+                <h2>Coding</h2>
+                <span>
+                  0<FaFire className="fire-emoji" fill="url(#fire-gradient)" />
+                </span>
+              </div>
+            </div>
+            <div className="weekly-info">
+              <p>Weekly Progress</p>
+              <span>1/7</span>
+            </div>
+            <div className="progress-bar">
+              <div className="progress-fill"></div>
+            </div>
+          </div>
+          <div className="habits-streaks 4">
+            <div className="details">
+              <div className="heading">
+                <h2>Runing</h2>
+                <span>
+                  1<FaFire className="fire-emoji" fill="url(#fire-gradient)" />
+                </span>
+              </div>
+            </div>
+            <div className="weekly-info">
+              <p>Weekly Progress</p>
+              <span>2/7</span>
+            </div>
+            <div className="progress-bar">
+              <div className="progress-fill"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <Footer />

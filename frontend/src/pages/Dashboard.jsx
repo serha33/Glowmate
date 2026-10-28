@@ -66,7 +66,7 @@ export default function Dashboard() {
               </h2>
               <span className="light-text">Consistency looks good on you!</span>
               <div className="streak-number">
-                <span>7 Days</span>
+                <span>3 Days</span>
               </div>
               <Link to="/streaks" className="dashboard-link">
                 See Streak History →
