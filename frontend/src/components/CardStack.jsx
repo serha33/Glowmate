@@ -1,5 +1,7 @@
 "use client";
-
+import ActiveHabits from "../assets/activehabits.png";
+import Profile from "../assets/profile.png";
+import Overview from "../assets/overview.png";
 import { motion, useMotionValue, useTransform } from "motion/react";
 import { useState, useEffect } from "react";
 import "./CardStack.css";
@@ -85,42 +87,16 @@ export default function Stack({
         {
           id: 1,
           content: (
-            <img
-              src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?q=80&w=500&auto=format"
-              alt="card-1"
-              className="card-image"
-            />
+            <img src={ActiveHabits} alt="card-1" className="card-image" />
           ),
         },
         {
           id: 2,
-          content: (
-            <img
-              src="https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=500&auto=format"
-              alt="card-2"
-              className="card-image"
-            />
-          ),
+          content: <img src={Profile} alt="card-2" className="card-image" />,
         },
         {
           id: 3,
-          content: (
-            <img
-              src="https://images.unsplash.com/photo-1452626212852-811d58933cae?q=80&w=500&auto=format"
-              alt="card-3"
-              className="card-image"
-            />
-          ),
-        },
-        {
-          id: 4,
-          content: (
-            <img
-              src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&w=500&auto=format"
-              alt="card-4"
-              className="card-image"
-            />
-          ),
+          content: <img src={Overview} alt="card-3" className="card-image" />,
         },
       ];
     }

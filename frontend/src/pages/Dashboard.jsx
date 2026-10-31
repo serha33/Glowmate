@@ -58,7 +58,7 @@ export default function Dashboard() {
       <div className="dashboard-layout">
         <div className="dashboard-content">
           {/* streaks card */}
-          <div className="dashboard-card streaks">
+          <div className="card streaks">
             <div className="streak-header">
               <h2>
                 Streaks{" "}
@@ -135,7 +135,7 @@ export default function Dashboard() {
           </div>
           <div className="habits-challenges-row">
             {/* Habits card */}
-            <div className="dashboard-card habits">
+            <div className="card habits">
               <div className="habits-top">
                 <h2>
                   Habits <FcTodoList />
@@ -168,7 +168,7 @@ export default function Dashboard() {
               </Link>
             </div>
             {/* Challenge card */}
-            <div className="dashboard-card challenges">
+            <div className="card challenges">
               <div className="challenges-top">
                 <h2>
                   Challenges{" "}
@@ -211,7 +211,7 @@ export default function Dashboard() {
             </div>
           </div>
           {/* Community card */}
-          <div className="dashboard-card communities">
+          <div className="card communities">
             <div className="community-left">
               <h2>
                 Communities <HiMiniUserGroup fill="url(#community-gradient)" />
@@ -259,7 +259,7 @@ export default function Dashboard() {
           </div>
         </div>
         {/* Profile card */}
-        <div className="dashboard-card profile">
+        <div className="card profile">
           <div className="profile-header">
             <div className="profile-frame"></div>
             <div className="profile-avatar">
@@ -314,9 +314,9 @@ export default function Dashboard() {
           </div>
           <div className="profile-current">
             <h2>Currently Glowing</h2>
-            <span>Coding</span>
-            <span>fitness</span>
-            <span>wellness</span>
+            <span className="glow-up-type coding">Coding</span>
+            <span className="glow-up-type fitness">fitness</span>
+            <span className="glow-up-type wellness">wellness</span>
           </div>
           <div className="profile-challenges">
             <h2>Challenges</h2>

@@ -50,7 +50,7 @@
   font-size: 1rem;
   font-weight: 700;
   color: #fff;
-  background: #ff4fa3;
+  background: #DE69A1;
   border: none;
   border-radius: 999px;
   cursor: pointer;
@@ -68,12 +68,11 @@
 .signup-heading {
     font-size: 2.7rem;
     font-weight: 600;
-    color: #7f3157;
+    color: #1c0a13;
     -webkit-text-stroke: 0.5px #331229;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     display: flex;
     ALIGN-ITEMS: center;
     JUSTIFY-CONTENT: center;
-    font-family: Poppins, sans-serif;
 }

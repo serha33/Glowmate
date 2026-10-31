@@ -87,3 +87,54 @@
 .notification{
   font-size: 1.5rem;
 }
+/* Landing page navigation */
+
+.landing-links {
+  gap: 35px;
+}
+
+.landing-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Login button */
+
+.login-btn {
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: 1px solid #e8e8e8;
+  border-radius: 25px;
+  transition: all 0.25s ease;
+}
+
+.login-btn:hover {
+  background: #f8f8f8;
+  border-color: #f2a7c5;
+  color: #DE69A1;
+}
+
+/* Sign up button */
+
+.signup-btn {
+  text-decoration: none;
+  background: #DE69A1;
+  color: white;
+  padding: 11px 23px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(242, 167, 197, 0.2);
+}
+
+.signup-btn:hover {
+  background: #e98eb4;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(242, 167, 197, 0.3);
+}
+

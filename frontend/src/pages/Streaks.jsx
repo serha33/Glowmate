@@ -40,7 +40,7 @@ export default function Streaks() {
       <Navbar />
       <div className="streaks-layout">
         <div className="streaks-content">
-          <div className="streaks-card current-streak">
+          <div className="card current-streak">
             <div className="current-header">
               <h2>Current Streak</h2>
               <span className="number">
@@ -59,21 +59,21 @@ export default function Streaks() {
             </div>
           </div>
           <div className="statistics">
-            <div className="streaks-card row longest-streak">
+            <div className="card row longest-streak">
               <div className="icon">🏆</div>
               <div className="details">
                 <span>Longest Streak</span>
                 <h2>3 Days</h2>
               </div>
             </div>
-            <div className="streaks-card row total-glowups">
+            <div className="card row total-glowups">
               <div className="icon">🌸</div>
               <div className="details">
                 <span>Total Glow-ups</span>
                 <h2>6</h2>
               </div>
             </div>
-            <div className="streaks-card row active-days">
+            <div className="card row active-days">
               <div className="icon">📅</div>
               <div className="details">
                 <span>Active Days</span>
@@ -83,7 +83,7 @@ export default function Streaks() {
           </div>
           <StreakCalendar />
         </div>
-        <div className="streaks-card active-habits">
+        <div className="card active-habits">
           <h2>Active habits</h2>
           <div className="habits-streaks 1">
             <div className="details">
