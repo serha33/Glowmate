@@ -1,0 +1,325 @@
+/* Challenges page only. Shared classes (.card, .light-text, .progress-bar,
+   .progress-fill, .icon, .card-details, .texts, .type, .level, .avatar,
+   .join-community, .dashboard-link, .bg-animation) come from existing CSS. */
+
+.challenges-page
+{
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Background animation */
+
+.bg-animation {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: auto;
+}
+
+.challenges-layout {
+position: relative;
+  z-index: 1;
+   display: grid;
+  grid-template-columns: 1fr 360px; 
+  align-items: start; 
+  gap: 24px;
+  margin: 35px auto;
+  width: 100%;
+  max-width: 1500px;
+  padding: 42px;
+  gap: 32px;
+}
+
+.challenges-main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Typography, matching the Dashboard headings */
+.challenges-page .section-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #302c32;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.challenges-page .challenge-title{
+  color: #302c32;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.challenges-page .challenge-title {
+  font-size: 1.8rem;
+}
+
+
+.section-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Active challenge */
+.active-challenge {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: linear-gradient(135deg, #f9e0ff 0%, #ffffff 60%, #ffebee 100%);
+}
+
+.active-challenge .icon{
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #b5a5d6;
+  font-size: 2.2rem;
+  align-self:first baseline;
+}
+
+
+.card-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+    align-items: flex-start;
+}
+.action-left {
+    display:flex;
+    flex-direction: row;
+    align-items:flex-start;
+    gap:24px;
+}
+.active-right {
+  display:flex;
+  flex-direction: column;
+  gap:16px;
+}
+
+.texts {
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 8px;
+}
+.texts .type{
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+ .level {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    font-size: 1rem;
+    font-weight: 600;
+ 
+} 
+.level p {
+  color: #302c32;
+}
+
+/* Text button, the button version of .dashboard-link */
+.text-action-btn {
+  background: none;
+  border: none;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #de69a1;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+}
+
+.text-action-btn:hover {
+  background-color: #f0d8e5;
+}
+.card-progress {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+  padding: 0 8px;
+}
+.progress-bar {
+  flex-grow: 1;
+  height:10px;
+  background-color: #ffffff;
+  border: 1px solid #B5A5D6;
+  border-radius: 10px;
+}
+.progress-fill {
+  height: 100%;
+   width: 60%;
+   background-color: #B5A5D6;
+
+   transition: width 0.3s ease;
+}
+
+/* Explore challenges */
+.challenges-page .challenges-explore {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: linear-gradient(135deg, #f9e0ff 0%, #ffffff 60%, #ffebee 100%);
+  align-self: flex-start;
+  width: 100%;
+   max-width: max-content; 
+   padding: 24px; 
+     box-sizing: border-box; 
+}
+.section-titles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* FIX: Aligns text elements to the left */
+  text-align: left;        /* Ensures text wraps and stays left-aligned */
+  width: 100%;
+}
+
+.explore-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 8px 4px 12px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+}
+.explore-carousel-wrapper {
+  display: flex;
+  align-items: center; 
+  gap: 16px;        
+  width: 100%;
+}
+.challenges-page .explore-card {
+  width: 240px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.explore-carousel-wrapper .scroll-streak {
+  flex-shrink: 0 !important; /* Forces the browser to keep its full width/height */
+  width: 36px;
+  height: 36px;
+}
+
+.explore-desc {
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+.explore-card .icon{
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #b5a5d6;
+  font-size: 1.3rem;
+  align-self:first baseline;
+  padding: 16px !important;
+}
+
+
+/* Mates panel */
+.challenges-page .mates-panel {
+  width: 340px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.mates-top {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mates-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mate-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.challenges-page .mate-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 0;
+  background: #f8eaf1;
+  color: #302c32;
+  font-weight: 700;
+}
+
+.mate-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.mate-name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #302c32;
+}
+
+.mate-info .progress-bar {
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .challenges-layout {
+    flex-direction: column;
+  }
+
+  .challenges-page .mates-panel {
+    width: 100%;
+  }
+}
