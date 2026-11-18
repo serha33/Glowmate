@@ -44,12 +44,6 @@ const exploreChallenges = [
   },
 ];
 
-const mates = [
-  { name: "Riya", day: 5 },
-  { name: "Aman", day: 3 },
-  { name: "Sneha", day: 7 },
-];
-
 export default function Challenges() {
   return (
     <div className="challenges-page">
@@ -166,29 +160,37 @@ export default function Challenges() {
         <aside className="card mates-panel">
           <div className="mates-top">
             <h2 className="challenge-title">Mates Participating</h2>
-            <span className="light-text"></span>
+            <span className="light-text">
+              See who's taking on challenges with you
+            </span>
           </div>
-
-          <ul className="mates-list">
-            {mates.map((mate) => (
-              <li key={mate.name} className="mate-row">
-                <div className="avatar mate-avatar">{mate.name[0]}</div>
-                <div className="mate-info">
-                  <div className="mate-name-row">
-                    <span>{mate.name}</span>
-                    <span className="light-text">{mate.day} days</span>
-                  </div>
-                  <div className="progress-bar">
-                    <div className="progress-fill" style={{}} />
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-
+          <div className="challenge">
+            <div className="title-top">
+              <h2>30-days Fitness</h2>
+              <span className="glow-up-type">3 mates</span>
+            </div>
+            <span className="light-text">Riya,Pixi,+1 other</span>
+          </div>
+          <div className="challenge">
+            <div className="title-top">
+              <h2>7-day Meditation</h2>
+              <span className="glow-up-type">2 mates</span>
+            </div>
+            <span className="light-text"> kevil and tira</span>
+          </div>
           <button className="text-action-btn" type="button">
             See All
           </button>
+          <div className="invite-mates">
+            <h2>More fun together!</h2>
+            <p className="light-text">
+              Invite more mates and discover challenges you can take on
+              together.
+            </p>
+            <button className="text-action-btn" type="button">
+              Invite Mates
+            </button>
+          </div>
         </aside>
       </div>
 

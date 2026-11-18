@@ -14,7 +14,6 @@
 }
 
 /* Background animation */
-
 .bg-animation {
   position: fixed;
   inset: 0;
@@ -67,7 +66,6 @@ position: relative;
   font-size: 1.8rem;
 }
 
-
 .section-titles {
   display: flex;
   flex-direction: column;
@@ -81,7 +79,6 @@ position: relative;
   gap: 16px;
   background: linear-gradient(135deg, #f9e0ff 0%, #ffffff 60%, #ffebee 100%);
 }
-
 .active-challenge .icon{
   width: 72px;
   height: 72px;
@@ -95,8 +92,6 @@ position: relative;
   font-size: 2.2rem;
   align-self:first baseline;
 }
-
-
 .card-details {
     display: flex;
     flex-direction: row;
@@ -115,7 +110,6 @@ position: relative;
   flex-direction: column;
   gap:16px;
 }
-
 .texts {
     display:flex;
     flex-direction: column;
@@ -140,8 +134,6 @@ position: relative;
 .level p {
   color: #302c32;
 }
-
-/* Text button, the button version of .dashboard-link */
 .text-action-btn {
   background: none;
   border: none;
@@ -153,9 +145,7 @@ position: relative;
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.2s ease;
-
 }
-
 .text-action-btn:hover {
   background-color: #f0d8e5;
 }
@@ -181,8 +171,6 @@ position: relative;
 
    transition: width 0.3s ease;
 }
-
-/* Explore challenges */
 .challenges-page .challenges-explore {
   display: flex;
   flex-direction: column;
@@ -197,8 +185,8 @@ position: relative;
 .section-titles {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* FIX: Aligns text elements to the left */
-  text-align: left;        /* Ensures text wraps and stays left-aligned */
+  align-items: flex-start; 
+  text-align: left;        
   width: 100%;
 }
 
@@ -211,8 +199,7 @@ position: relative;
     display: none;
   }
   
-  /* Hide scrollbar for IE, Edge and Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
+  -ms-overflow-style: none; 
   scrollbar-width: none;
 }
 .explore-carousel-wrapper {
@@ -238,6 +225,7 @@ position: relative;
   font-size: 0.95rem;
   line-height: 1.45;
 }
+
 .explore-card .icon{
   width: 42px;
   height: 42px;
@@ -253,7 +241,6 @@ position: relative;
   padding: 16px !important;
 }
 
-
 /* Mates panel */
 .challenges-page .mates-panel {
   width: 340px;
@@ -262,6 +249,7 @@ position: relative;
   flex-direction: column;
   align-items: stretch;
   gap: 16px;
+  background-color:#f3ebf7 ;
 }
 
 .mates-top {
@@ -269,51 +257,43 @@ position: relative;
   flex-direction: column;
   gap: 4px;
 }
-
-.mates-list {
-  list-style: none;
+.challenge {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-}
-
-.mate-row {
-  display: flex;
-  align-items: center;
+  padding: 12px;
+  border: solid 1px #f0d8e5;
+  border-radius: 10px;
+  background-color: #ffffff;
   gap: 12px;
 }
-
-.challenges-page .mate-avatar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-right: 0;
-  background: #f8eaf1;
-  color: #302c32;
-  font-weight: 700;
-}
-
-.mate-info {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  flex: 1;
-  min-width: 0;
-}
-
-.mate-name-row {
-  display: flex;
+.title-top{
+  display:flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-weight: 600;
-  color: #302c32;
+}
+.title-top h2 {
+  font-size: 1.3rem;
+}
+.title-top .glow-up-type {
+  background-color: #f0d8e5;
 }
 
-.mate-info .progress-bar {
-  width: 100%;
-}
+.invite-mates {
+  display:flex ;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border: solid 1px #f0d8e5;
+  border-radius: 10px;
+  background-color: #ffffff;
 
+}
+.invite-mates p {
+  text-align: center;
+}
 @media (max-width: 1100px) {
   .challenges-layout {
     flex-direction: column;
