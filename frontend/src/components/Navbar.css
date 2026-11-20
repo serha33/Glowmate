@@ -1,7 +1,7 @@
 .navbar {
   position: sticky;
   top: 16px;
-  z-index: 100;
+  z-index: 1000;
 
   width: calc(100% - 30px);
   max-width: 1500px;
@@ -19,7 +19,15 @@
   border-radius: 20px;
   box-shadow: 0 8px 30px rgba(255, 105, 180, 0.2);
 }
-
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: -17px; /* Covers the 16px top offset */
+  left: 0;
+  right: 0;
+  height: 17px; /* Match your light pink page background color */
+  z-index: -1;
+}
 .logo {
   font-size: 24px;
   font-weight: 700;
@@ -58,7 +66,7 @@
     font-family: 'Fredoka', sans-serif;
     font-weight: 600;
     font-size: 2rem;
-    letter-spacing: 1 px;
+    letter-spacing: 1px;
 }
 .navbar-right {
   display: flex;

@@ -9,10 +9,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  overflow: hidden;
+  align-items: center; 
 }
-
 /* Background animation */
 
 .bg-animation {
@@ -39,10 +37,6 @@
   padding: 42px;
   gap: 32px;
 }
-
-/* ===========================
-   LEFT CONTENT
-=========================== */
 
 .habits-content {
   display: flex;
