@@ -70,7 +70,7 @@
 .post-qoutes {
     font-size: 1.3rem;
     background-color: white;
-    border: solid 1px #f0d8e5;
+    border: solid 1px 	#DCCBB5;
     border-radius: 10px;
     padding: 12px;
     margin: 12px 0;
@@ -101,7 +101,7 @@
   justify-content: space-between;
   gap: 64px;
     background-color: white;
-    border: solid 1px #f0d8e5;
+    border: solid 1px 	#DCCBB5;
     border-radius: 10px;
     padding: 6px 12px;
 }
@@ -112,7 +112,7 @@
       font-size: 0.95rem;
 }
 .all-comments {
-  color: #DE69A1;
+  color: 	#806650;
   cursor: pointer;
   padding-left: 3px;
 }
@@ -122,8 +122,8 @@
 
 .my-post span{
   padding: 16px;
-  background-color: #f0d8e5;
-  border: solid 1px #f0d8e5;
+  background-color: 	#DCCBB5;
+  border: solid 1px 	#DCCBB5;
   border-radius: 10px;
   width: 80%;
   align-self: flex-start;
@@ -145,7 +145,7 @@
   padding: 12px 16px;
   border: none;
   border-radius: 10px;
-  background: #d968a0;
+  background: 	#806650;
   color: #ffffff;
   font-family: inherit;
   font-size: 1rem;
@@ -185,7 +185,7 @@
   font: inherit;
   font-size: 1rem;
   font-weight: 600;
-  color: #de69a1;
+  color: 	#806650;
   padding: 12px 20px;
   border-radius: 10px;
   cursor: pointer;
@@ -193,7 +193,7 @@
   text-decoration: none;
 }
 .btn1:hover {
-  background-color: #f0d8e5;
+  background-color: 	#DCCBB5;
 }
 
 .sidebar-heading h3 {
