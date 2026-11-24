@@ -64,9 +64,7 @@ export default function Challenges() {
 
       <div className="bg-animation">
         <Dither
-          waveColor={[
-            0.9686274509803922, 0.4392156862745098, 0.7058823529411765,
-          ]}
+          waveColor={[0.9, 0.93, 0.85]}
           disableAnimation={true}
           enableMouseInteraction={true}
           mouseRadius={0.2}
@@ -107,13 +105,13 @@ export default function Challenges() {
               </div>
 
               <div className="active-right">
-                <button className="text-action-btn" type="button">
+                <button className="btn1" type="button">
                   See Rules
                 </button>
                 <button className="join-community" type="button">
                   Log Today
                 </button>
-                <button className="text-action-btn" type="button">
+                <button className="btn1" type="button">
                   Leave Challenge
                 </button>
               </div>
@@ -141,7 +139,7 @@ export default function Challenges() {
                 {exploreChallenges.map((c) => (
                   <div key={c.title} className="card explore-card">
                     <div className="card-details">
-                      <div className="icon">{c.emoji}</div>
+                      <div className="icon-s">{c.emoji}</div>
                       <div className="texts">
                         <h3 className="explore-title ">{c.title}</h3>
                         <span className="light-text">{c.duration} days</span>
@@ -164,8 +162,9 @@ export default function Challenges() {
               See who's taking on challenges with you
             </span>
           </div>
-          <div className="challenge">
+          <div className="challenge f">
             <div className="title-top">
+              <div className="icon-s">💪🏼</div>
               <h2>30-days Fitness</h2>
               <span className="glow-up-type">3 mates</span>
             </div>
@@ -173,12 +172,15 @@ export default function Challenges() {
           </div>
           <div className="challenge">
             <div className="title-top">
+              <div className="icon-s-r">
+                <GiMeditation />
+              </div>
               <h2>7-day Meditation</h2>
               <span className="glow-up-type">2 mates</span>
             </div>
             <span className="light-text"> kevil and tira</span>
           </div>
-          <button className="text-action-btn" type="button">
+          <button className="btn1" type="button">
             See All
           </button>
           <div className="invite-mates">
@@ -187,7 +189,7 @@ export default function Challenges() {
               Invite more mates and discover challenges you can take on
               together.
             </p>
-            <button className="text-action-btn" type="button">
+            <button className="btn1" type="button">
               Invite Mates
             </button>
           </div>

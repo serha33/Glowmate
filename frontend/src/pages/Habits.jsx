@@ -9,9 +9,7 @@ export default function Habits() {
     <div className="habits-page">
       <div className="bg-animation">
         <Dither
-          waveColor={[
-            0.9686274509803922, 0.4392156862745098, 0.7058823529411765,
-          ]}
+          waveColor={[0.82, 0.9, 0.8]}
           disableAnimation={true}
           enableMouseInteraction={true}
           mouseRadius={0.2}

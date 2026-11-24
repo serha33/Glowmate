@@ -190,7 +190,7 @@
   justify-content: center;
   gap: 24px;
   padding:24px;
-  background: linear-gradient(135deg, #f9e0ff 0%, #ffffff 60%, #ffebee 100%);
+  background: #FBF7E9;
 
 }
 .active-habits h2 {

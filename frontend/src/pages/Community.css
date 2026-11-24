@@ -41,7 +41,7 @@
     align-items: flex-start;
     gap: 12px;
     width: 100%;
-         background: linear-gradient(135deg, #ffeff8 0%, #ffffff 60%, #ffebee 100%);
+    border: solid 2px 	#EBD9CB;
 }
 
 .post-content {
@@ -70,7 +70,7 @@
 .post-qoutes {
     font-size: 1.3rem;
     background-color: white;
-    border: solid 1px 	#DCCBB5;
+    border: solid 1px 	#806650;
     border-radius: 10px;
     padding: 12px;
     margin: 12px 0;
@@ -101,7 +101,7 @@
   justify-content: space-between;
   gap: 64px;
     background-color: white;
-    border: solid 1px 	#DCCBB5;
+    border: solid 1px 	#806650;
     border-radius: 10px;
     padding: 6px 12px;
 }
@@ -122,8 +122,8 @@
 
 .my-post span{
   padding: 16px;
-  background-color: 	#DCCBB5;
-  border: solid 1px 	#DCCBB5;
+  background-color: 	#EBD9CB;
+  border: solid 1px 	#806650;
   border-radius: 10px;
   width: 80%;
   align-self: flex-start;
@@ -193,7 +193,7 @@
   text-decoration: none;
 }
 .btn1:hover {
-  background-color: 	#DCCBB5;
+  background-color: #DCCBB5;
 }
 
 .sidebar-heading h3 {
@@ -223,7 +223,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f9e5ef;
+  background: 	#ffe8d6;
   border: solid 1px #d2c1ca;
   position: relative;
 }
