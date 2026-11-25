@@ -24,7 +24,7 @@ export default function Streaks() {
       </svg>
       <div className="bg-animation">
         <Dither
-          waveColor={[0.78, 0.67, 0.55]}
+          waveColor={[0.95, 0.9, 0.82]}
           disableAnimation={true}
           enableMouseInteraction={true}
           mouseRadius={0.2}

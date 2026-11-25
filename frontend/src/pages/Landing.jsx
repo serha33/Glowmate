@@ -46,7 +46,7 @@ export default function Landing() {
 
             <br />
 
-            <Link to="/signup" className="hero-cta">
+            <Link to="/signup" className="hero-cta btn">
               Start Your Glow-Up
             </Link>
           </div>
